@@ -14,13 +14,13 @@ class TaskTableSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('tasks')->insert(
-        // [
-        //     'id' => '1' ,
-        //     'title' => 'タスク1' ,
-        //     'body' => 'これはタスク1だよ'
-        // ]
-        // );
+        DB::table('tasks')->insert(
+        [
+            'id' => '1' ,
+            'title' => 'タスク1' ,
+            'body' => 'これはタスク1だよ'
+        ]
+        );
 
         $param = [[
             'id' => '2',
@@ -31,6 +31,11 @@ class TaskTableSeeder extends Seeder
             'id' => '3',
             'title' => 'タスク3',
             'body' => 'これはタスク3だよ'
+        ],
+        [
+            'id' => '4',
+            'title' => 'タスク4',
+            'body' => 'これはタスク4だよ'
         ]];
         DB::table('tasks')->insert($param);
     }
